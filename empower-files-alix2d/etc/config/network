@@ -1,0 +1,21 @@
+config interface 'loopback'
+	option ifname 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config device
+	option name 'br-ovs'
+	option type 'ovs'
+	list ifname 'eth0'
+
+config interface 'wan'
+	option ifname 'br-ovs'
+	option proto 'dhcp'
+
+config interface lan
+	option ifname	eth1
+	option proto	static
+	option ipaddr	192.168.250.1
+	option netmask	255.255.255.0
+

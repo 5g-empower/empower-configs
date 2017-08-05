@@ -1,0 +1,7 @@
+config empower general
+    option "master_ip" "192.168.100.158"
+    option "master_port" "4433"
+    option "network" "wan"
+    option "interface" "empower0"
+    list "ifname" "empower0"
+    list "ifname" "empower1”

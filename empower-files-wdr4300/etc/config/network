@@ -7,10 +7,8 @@ config interface 'loopback'
 config globals 'globals'
         option ula_prefix 'fdcc:0574:a9fb::/48'
 
-config device
-        option name 'br-ovs'
-        option type 'ovs'
-        list ifname 'eth0.2'
+config interface 'wanphy'
+        option ifname 'eth0.2'
 
 config interface 'lan'
         option ifname 'eth0.1'

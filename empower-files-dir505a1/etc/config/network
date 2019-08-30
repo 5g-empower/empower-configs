@@ -4,10 +4,8 @@ config interface 'loopback'
 	option ipaddr '127.0.0.1'
 	option netmask '255.0.0.0'
 
-config device
-	option name 'br-ovs'
-	option type 'ovs'
-	list ifname 'eth1'
+config interface 'wanphy'
+        option ifname 'eth1'
 
 config interface 'wan'
 	option ifname 'br-ovs'

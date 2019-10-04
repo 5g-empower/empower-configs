@@ -1,0 +1,23 @@
+config wifi-device  radio1
+	option type     mac80211
+	option channel  36
+	option hwmode	11n
+        option htmode   HT20
+	option path	'pci0000:00/0000:00:00.0'
+
+config wifi-iface empower0
+        option device   radio0
+        option mode     monitor
+        option ifname   moni0
+
+config wifi-device  radio0
+	option type     mac80211
+	option channel  6
+	option hwmode	11n
+        option htmode   HT20
+	option path	'platform/ar934x_wmac'
+
+config wifi-iface empower1
+        option device   radio1
+        option mode     monitor
+        option ifname   moni1
